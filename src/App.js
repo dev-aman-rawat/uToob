@@ -12,7 +12,7 @@ import {
 export default function App() {
   return (
     <BrowserRouter>
-      <Box sx={{ backgroundColor: "#000" }}>
+      <Box sx={{ backgroundColor: "#000" }} height="100vh">
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Feed />} />
