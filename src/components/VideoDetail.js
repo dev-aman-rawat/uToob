@@ -36,7 +36,7 @@ const VideoDetail = () => {
           marginTop: "30vh",
         }}
       >
-        <Rings height="122" width="122" color="red" ariaLabel="loading" />;
+        <Rings height="122" width="122" color="red" ariaLabel="loading" />
       </span>
     );
   }
