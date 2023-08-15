@@ -2,6 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Sidebar, Videos } from "./";
+import { Rings } from "react-loader-spinner";
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
@@ -13,6 +14,21 @@ const Feed = () => {
       // console.log(data.items);
     });
   }, [selectedCategory]);
+
+  if (!videos.length) {
+    return (
+      <span
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "30vh",
+        }}
+      >
+        <Rings height="122" width="122" color="red" ariaLabel="loading" />;
+      </span>
+    );
+  }
 
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>

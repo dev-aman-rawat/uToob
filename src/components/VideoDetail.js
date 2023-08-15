@@ -5,6 +5,7 @@ import ReactPlayer from "react-player";
 import { Link, useParams } from "react-router-dom";
 import { Videos } from "./";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
+import { Rings } from "react-loader-spinner";
 
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);
@@ -22,12 +23,22 @@ const VideoDetail = () => {
     );
     // fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`)
     // .then((data) => setVideos(data.items))
-
-    // console.log(videos);
   }, [id]);
+  // console.log(videoDetail);
 
   if (!videoDetail?.snippet) {
-    return "waiting for response";
+    return (
+      <span
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "30vh",
+        }}
+      >
+        <Rings height="122" width="122" color="red" ariaLabel="loading" />;
+      </span>
+    );
   }
 
   const {

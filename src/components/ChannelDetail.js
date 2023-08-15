@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Videos, ChannelCard } from "./";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
+import { Rings } from "react-loader-spinner";
 
 const ChannelDetail = () => {
   const [channelDetail, setChannelDetail] = useState(null);
@@ -20,8 +21,20 @@ const ChannelDetail = () => {
     );
   }, [id]);
 
-  // console.log(videos);
-  // console.log(channelDetail);
+  if (!videos.length) {
+    return (
+      <span
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "30vh",
+        }}
+      >
+        <Rings height="122" width="122" color="red" ariaLabel="loading" />;
+      </span>
+    );
+  }
 
   return (
     <Box minHeight="95vh">

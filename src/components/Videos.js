@@ -14,7 +14,7 @@ const Videos = ({ videos, direction }) => {
           marginTop: "30vh",
         }}
       >
-        <Rings height="77" width="77" color="red" ariaLabel="loading" />;
+        <Rings height="122" width="122" color="red" ariaLabel="loading" />;
       </span>
     );
   }
