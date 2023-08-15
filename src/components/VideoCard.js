@@ -18,7 +18,7 @@ const VideoCard = ({
   return (
     <Card
       sx={{
-        width: { xs: "444px", sm: "355px", md: "320px" },
+        width: { xs: "360px", sm: "355px", md: "320px" },
         boxShadow: "none",
         borderRadius: "0",
       }}
@@ -29,7 +29,7 @@ const VideoCard = ({
           alt={snippet?.title}
           sx={{
             width: {
-              xs: "444px",
+              xs: "360px",
               sm: "355px",
               md: "320",
             },
