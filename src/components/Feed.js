@@ -11,9 +11,11 @@ const Feed = () => {
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) => {
       setVideos(data.items);
-      // console.log(data.items);
     });
   }, [selectedCategory]);
+
+  console.log(videos);
+  // console.log();
 
   if (!videos.length) {
     return (
@@ -47,9 +49,16 @@ const Feed = () => {
           className="copyright"
           variant="body2"
           sx={{ mx: 1.5, color: "#fff" }}
-          mt="14px"
+          my="14px"
         >
-          Copyrights &copy;2023 uToob
+          &copy;2023 uToob @
+          <a
+            style={{ color: "#fff" }}
+            target="_blank"
+            href="https://github.com/dev-aman-rawat"
+          >
+            aman
+          </a>
         </Typography>
       </Box>
       <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>

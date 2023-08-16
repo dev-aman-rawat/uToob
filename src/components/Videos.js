@@ -3,7 +3,7 @@ import { Box, Stack } from "@mui/material";
 import { VideoCard, ChannelCard } from "./";
 import { Rings } from "react-loader-spinner";
 
-const Videos = ({ videos, direction }) => {
+const Videos = ({ videos, direction, widthForChannel }) => {
   if (!videos?.length) {
     return (
       <span
@@ -19,6 +19,7 @@ const Videos = ({ videos, direction }) => {
     );
   }
 
+  // console.log(videos);
   return (
     <Stack
       direction={direction || "row"}
@@ -28,8 +29,12 @@ const Videos = ({ videos, direction }) => {
     >
       {videos.map((video, idx) => (
         <Box key={idx}>
-          {video.id.videoId && <VideoCard video={video} />}
-          {video.id.channelId && <ChannelCard channelDetail={video} />}
+          {video.id.videoId && (
+            <VideoCard video={video} widthForChannel={widthForChannel} />
+          )}
+          {video.id.channelId && (
+            <ChannelCard channelDetail={video} desc={false} />
+          )}
         </Box>
       ))}
     </Stack>

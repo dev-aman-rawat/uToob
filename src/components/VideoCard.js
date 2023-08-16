@@ -14,11 +14,12 @@ const VideoCard = ({
     id: { videoId },
     snippet,
   },
+  widthForChannel,
 }) => {
   return (
     <Card
       sx={{
-        width: { xs: "360px", sm: "355px", md: "320px" },
+        width: { xs: "360px", sm: "355px", md: widthForChannel || "320px" },
         boxShadow: "none",
         borderRadius: "0",
       }}
@@ -31,7 +32,7 @@ const VideoCard = ({
             width: {
               xs: "360px",
               sm: "355px",
-              md: "320",
+              md: widthForChannel || "320",
             },
             height: 188,
           }}

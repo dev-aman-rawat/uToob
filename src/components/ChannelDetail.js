@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Videos, ChannelCard } from "./";
+import { Videos, ChannelCard, Banner } from "./";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Rings } from "react-loader-spinner";
 
@@ -21,6 +21,9 @@ const ChannelDetail = () => {
     );
   }, [id]);
 
+  // console.log(videos);
+  // console.log(channelDetail);
+
   if (!videos.length) {
     return (
       <span
@@ -39,19 +42,16 @@ const ChannelDetail = () => {
   return (
     <Box minHeight="95vh">
       <Box>
-        <div
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(8,17,141,1) 0%, rgba(129,3,3,1) 55%, rgba(1,57,135,1) 100%)",
-            zIndex: 10,
-            height: "300px",
-          }}
-        />
-        <ChannelCard channelDetail={channelDetail} marginTop="-111px" />
+        <div>
+          <Banner
+            img={channelDetail?.brandingSettings?.image?.bannerExternalUrl}
+          />
+        </div>
+        <ChannelCard channelDetail={channelDetail} desc={true} />
       </Box>
       <Box display="flex" p="2">
         <Box sx={{ mr: { sm: "111px" } }}>
-          <Videos videos={videos} />
+          <Videos videos={videos} widthForChannel="355px" />
         </Box>
       </Box>
     </Box>
