@@ -6,6 +6,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -53,7 +54,7 @@ a {
   text-transform: capitalize;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   cursor: pointer;
   background: transparent;
   outline: none;
@@ -88,4 +89,10 @@ a {
   .search-bar {
     width: 200px;
   }
+
+  /* .sidebar-stack {
+    position: sticky;
+    top: 86px;
+    background: #000000bf;
+  } */
 }

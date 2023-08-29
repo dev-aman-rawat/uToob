@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Sidebar, Videos } from "./";
 import { Rings } from "react-loader-spinner";
+import { GitHub, LinkedIn } from "@mui/icons-material";
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
@@ -14,7 +15,7 @@ const Feed = () => {
     });
   }, [selectedCategory]);
 
-  console.log(videos);
+  // console.log(videos);
   // console.log();
 
   if (!videos.length) {
@@ -45,21 +46,42 @@ const Feed = () => {
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-        <Typography
-          className="copyright"
-          variant="body2"
-          sx={{ mx: 1.5, color: "#fff" }}
-          my="14px"
-        >
-          &copy;2023 uToob @
-          <a
-            style={{ color: "#fff" }}
-            target="_blank"
-            href="https://github.com/dev-aman-rawat"
+        <Box sx={{ display: { sx: "none", md: "block" } }}>
+          <Typography
+            className="copyright"
+            variant="caption"
+            sx={{ mx: 1.5, color: "#fff" }}
+            my="14px"
+            textAlign="center"
           >
-            aman
-          </a>
-        </Typography>
+            &copy;2023 uToob
+          </Typography>
+          <Typography
+            variant="h6"
+            display="flex"
+            alignItems="center"
+            justifyContent="space-evenly"
+            borderTop="2px solid gray"
+            width="100%"
+          >
+            <a
+              style={{ color: "#fff" }}
+              target="_blank"
+              href="https://github.com/dev-aman-rawat"
+              rel="noreferrer"
+            >
+              <GitHub color="#fff" fontSize="50px" />
+            </a>
+            <a
+              style={{ color: "#fff" }}
+              target="_blank"
+              href="https://www.linkedin.com/in/aman-rawat-907800287"
+              rel="noreferrer"
+            >
+              <LinkedIn color="#fff" fontSize="50px" />
+            </a>
+          </Typography>
+        </Box>
       </Box>
       <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
         <Typography

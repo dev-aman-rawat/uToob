@@ -10,7 +10,11 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
         overflowY: "auto",
         height: { sx: "auto", md: "95%" },
         flexDirection: { md: "column" },
+        // position: "sticky",
+        // top: "86px",
+        // background: "#000000bf",
       }}
+      className="sidebar-stack"
     >
       {categories.map((category) => (
         <button

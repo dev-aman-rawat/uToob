@@ -12,7 +12,10 @@ import {
 export default function App() {
   return (
     <BrowserRouter>
-      <Box sx={{ backgroundColor: "#000" }} minHeight="100vh">
+      <Box
+        sx={{ backgroundColor: "#000" }}
+        height={{ sx: "auto", md: "115vh" }}
+      >
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Feed />} />
@@ -24,3 +27,6 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+// work to to leater
+// https://youtube-v31.p.rapidapi.com/commentThreads?part=snippet&videoId=jOTfBlKSQYY&maxResults=100
