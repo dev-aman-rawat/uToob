@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Sidebar, Videos } from "./";
 import { Rings } from "react-loader-spinner";
-import { GitHub, LinkedIn } from "@mui/icons-material";
+import { GitHub, LinkedIn, Public } from "@mui/icons-material";
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
@@ -37,16 +37,25 @@ const Feed = () => {
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box
         sx={{
-          height: { sx: "auto", md: "100vh" },
+          height: { sx: "auto", md: "90vh" },
           borderRight: "1px solid #3d3d3d",
           px: { sx: 0, md: 2 },
         }}
+        className="slidebar"
       >
         <Sidebar
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-        <Box sx={{ display: { sx: "none", md: "block" } }}>
+        <Box
+          sx={{
+            display: "flex",
+            mt: "10px",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+            flexDirection: "column",
+          }}
+        >
           <Typography
             className="copyright"
             variant="caption"
@@ -57,12 +66,13 @@ const Feed = () => {
             &copy;2023 uToob
           </Typography>
           <Typography
+            className="info"
             variant="h6"
             display="flex"
             alignItems="center"
             justifyContent="space-evenly"
-            borderTop="2px solid gray"
             width="100%"
+            marginTop="4px"
           >
             <a
               style={{ color: "#fff" }}
@@ -79,6 +89,9 @@ const Feed = () => {
               rel="noreferrer"
             >
               <LinkedIn color="#fff" fontSize="50px" />
+            </a>
+            <a style={{ color: "#fff" }}>
+              <Public color="#fff" fontSize="50px" />
             </a>
           </Typography>
         </Box>

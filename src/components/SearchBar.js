@@ -1,11 +1,12 @@
 import { Search } from "@mui/icons-material";
-import { IconButton, Paper } from "@mui/material";
+import { IconButton, Paper, useMediaQuery } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
+  const mobile = useMediaQuery("(max-width:499px)");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,7 +35,11 @@ const SearchBar = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <IconButton type="submit" sx={{ p: "10px", color: "red" }}>
+      <IconButton
+        type="submit"
+        sx={{ color: "red" }}
+        style={{ padding: mobile ? "5px 10px" : "10px" }}
+      >
         <Search />
       </IconButton>
     </Paper>

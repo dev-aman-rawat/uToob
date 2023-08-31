@@ -48,7 +48,7 @@ const ChannelCard = ({ channelDetail, desc }) => {
             <CheckCircle sx={{ fontSize: 16, color: "gray", ml: "5px" }} />
           </Typography>
           <Typography variant="body1" width="500px">
-            {desc && channelDetail?.snippet?.description}
+            {desc && channelDetail?.snippet?.description.slice(0, 150) + "..."}
           </Typography>
 
           {channelDetail?.statistics?.subscriberCount && (

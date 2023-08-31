@@ -14,7 +14,6 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
         // top: "86px",
         // background: "#000000bf",
       }}
-      className="sidebar-stack"
     >
       {categories.map((category) => (
         <button

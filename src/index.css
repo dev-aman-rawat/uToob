@@ -7,6 +7,7 @@ body {
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   scroll-behavior: smooth;
+  background-color: black;
 }
 
 a {
@@ -66,14 +67,36 @@ a {
   transition: all 0.3s ease;
 }
 
+.footer {
+  visibility: hidden;
+}
+
 @media screen and (max-width: 900px) {
   .category-btn {
     margin: 10px;
+  }
+  .copyright {
+    display: none !important;
+  }
+  .info {
+    display: none !important;
+  }
+  .slidebar {
+    background: #00000096;
+    position: sticky;
+    top: 80px;
+  }
+
+  .footer {
+    visibility: visible;
   }
 }
 
 @media screen and (max-width: 800px) {
   .copyright {
+    display: none !important;
+  }
+  .info {
     display: none !important;
   }
 }
@@ -87,12 +110,12 @@ a {
     height: 45vh !important;
   }
   .search-bar {
-    width: 200px;
+    width: 70px;
   }
 
-  /* .sidebar-stack {
+  .slidebar {
+    background: #00000096;
     position: sticky;
-    top: 86px;
-    background: #000000bf;
-  } */
+    top: 80px;
+  }
 }
