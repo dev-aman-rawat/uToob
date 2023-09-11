@@ -77,7 +77,7 @@ const Feed = () => {
             <a
               style={{ color: "#fff" }}
               target="_blank"
-              href="https://github.com/dev-aman-rawat"
+              href="https://github.com/amanr-dev"
               rel="noreferrer"
             >
               <GitHub color="#fff" fontSize="50px" />
@@ -85,7 +85,7 @@ const Feed = () => {
             <a
               style={{ color: "#fff" }}
               target="_blank"
-              href="https://www.linkedin.com/in/aman-rawat-907800287"
+              href="https://www.linkedin.com/in/amanrawat09"
               rel="noreferrer"
             >
               <LinkedIn color="#fff" fontSize="50px" />

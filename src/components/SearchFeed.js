@@ -14,7 +14,7 @@ const SearchFeed = () => {
       setVideos(data.items);
     });
   }, [searchTerm]);
-  console.log(videos);
+  // console.log(videos);
 
   if (!videos.length) {
     return (
