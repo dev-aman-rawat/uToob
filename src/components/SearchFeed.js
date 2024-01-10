@@ -36,7 +36,7 @@ const SearchFeed = () => {
       <Typography
         variant="h5"
         fontWeight="bold"
-        mb={2}
+        mb="-23px"
         p={2}
         sx={{
           color: "white",
@@ -46,6 +46,11 @@ const SearchFeed = () => {
         <span style={{ color: "#F31503" }}> {searchTerm} </span>
         videos
       </Typography>
+      <Box
+        width="100%"
+        height="1px"
+        sx={{ backgroundColor: "gray", marginBottom: "30px", marginTop: "2px" }}
+      />
       <Videos videos={videos} />
     </Box>
   );

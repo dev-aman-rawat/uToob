@@ -63,7 +63,7 @@ const Feed = () => {
             my="14px"
             textAlign="center"
           >
-            &copy;2023 uToob
+            &copy;{new Date().getFullYear()} uToob
           </Typography>
           <Typography
             className="info"
