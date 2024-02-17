@@ -24,8 +24,6 @@ const VideoDetail = () => {
     // fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`)
     // .then((data) => setVideos(data.items))
   }, [id]);
-  console.log(videos);
-  console.log(videoDetail);
 
   if (!videoDetail?.snippet) {
     return (
@@ -46,9 +44,6 @@ const VideoDetail = () => {
     snippet: { title, channelId, channelTitle },
     statistics: { viewCount, likeCount },
   } = videoDetail;
-
-  // console.log(videoDetail);
-  // console.log(videos);
 
   return (
     <Box minHeight="90vh">

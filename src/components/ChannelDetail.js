@@ -21,9 +21,6 @@ const ChannelDetail = () => {
     );
   }, [id]);
 
-  // console.log(videos);
-  // console.log(channelDetail);
-
   if (!videos.length) {
     return (
       <span

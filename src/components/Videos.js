@@ -22,7 +22,6 @@ const Videos = ({ videos, direction, widthForChannel }) => {
     );
   }
 
-  // console.log(videos);
   return (
     <>
       <Stack
