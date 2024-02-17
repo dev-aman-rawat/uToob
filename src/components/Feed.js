@@ -15,9 +15,6 @@ const Feed = () => {
     });
   }, [selectedCategory]);
 
-  // console.log(videos);
-  // console.log();
-
   if (!videos.length) {
     return (
       <span

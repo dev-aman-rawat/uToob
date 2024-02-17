@@ -24,6 +24,3 @@ export default function App() {
     </BrowserRouter>
   );
 }
-
-// work to to leater
-// https://youtube-v31.p.rapidapi.com/commentThreads?part=snippet&videoId=jOTfBlKSQYY&maxResults=100
